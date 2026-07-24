@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/rgPaymentMethod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/rbCash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cash"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/rbUtang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Utang"
+            android:layout_marginStart="24dp" />
+
+    </RadioGroup>
+
+    <!-- CASH SECTION -->
+    <LinearLayout
+        android:id="@+id/layoutCash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etCashReceived"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cash Received"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/tvChange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+
+    <!-- UTANG SECTION -->
+    <LinearLayout
+        android:id="@+id/layoutUtang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <Spinner
+            android:id="@+id/spinnerCustomer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnPickDueDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set Due Date (optional)"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/tvDueDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnConfirmPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm Payment"
+        android:layout_marginTop="24dp" />
+
+</LinearLayout>

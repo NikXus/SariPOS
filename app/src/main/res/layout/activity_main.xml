@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvTodaySalesLabel"
+                    android:text="Today's Sales"
+                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvTodaySalesValue"
+                    android:text="₱0.00"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvTodayTransactionsLabel"
+                    android:text="Today's Transactions"
+                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvTodayTransactionsValue"
+                    android:text="0"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvLowStockLabel"
+                    android:text="Low Stock Items"
+                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/tvLowStockValue"
+                    android:text="0"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <EditText
+            android:id="@+id/etProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Product Name" />
+
+        <EditText
+            android:id="@+id/etProductPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Selling Price"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/etProductStock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Stock"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/etProductBarcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Barcode (optional)" />
+
+        <Button
+            android:id="@+id/btnAddProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Product" />
+
+        <Button
+            android:id="@+id/btnViewCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Cart" />
+
+        <Button
+            android:id="@+id/btnViewHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View History" />
+
+        <Button
+            android:id="@+id/btnScanBarcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scan Barcode" />
+
+        <EditText
+            android:id="@+id/etSearchProducts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Search products..."
+            android:inputType="text"
+            android:drawablePadding="8dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvProducts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:nestedScrollingEnabled="false" />
+
+        <Button
+            android:id="@+id/btnViewCustomers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Customers" />
+
+        <Button
+            android:id="@+id/btnViewUtang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Utang" />
+
+        <Button
+            android:id="@+id/btnViewAnalytics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Analytics" />
+
+        <Button
+            android:id="@+id/btnViewRestockSuggestions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AI Restock Suggestions" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
